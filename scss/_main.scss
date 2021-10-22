@@ -1,0 +1,206 @@
+/*main*/
+body, main{
+    .main{
+        background-color: $bg_naranja ; 
+        display: grid;
+        text-align: center;
+        align-items: center;
+        gap: 10px;
+        padding-top: 85px; 
+        padding-bottom: 20px; 
+        .section{
+            background-color:$bg_naranjaoscuro;
+        }
+        div{
+            .container{
+                padding: 80px;
+        }
+            .claseDl:hover{
+                transform: translate(20px, 10px);
+        }
+            .dropdown {
+                text-align: right;
+                padding-right: 40px;
+        }
+        h3{
+            text-align: center;
+            text-transform: uppercase;
+            margin: 50px;
+        }
+        .h2Center{
+            text-align: center;
+            animation-duration: 2s;
+            animation-name:transparencia;
+        }
+        }
+        .empresaContenedor{
+            width: 90%;
+            max-width: 1000px;
+            margin: 10px auto;
+            display: grid;
+            grid-template-columns: 1fr , 1fr, 1fr;
+            grid-template-rows: 1fr, auto;
+            grid-template-areas:
+            "quienesSomos objetivos informacion";
+
+            @mixin empresa($grid) {
+                grid-area: $grid;
+                border: 2px solid $bg_naranja;
+                padding: 20px;
+                text-align: left;
+                background: $bg_blanco;
+                margin: 10px;
+                grid-gap: 10px;   
+            }
+            .quienesSomos{
+            @include empresa (quienesSomos)
+            }
+            .objetivos{
+            @include empresa(objetivos)
+            }
+            .informacion{
+           @include empresa(informacion)
+            }   
+    
+        @media only screen and (max-width: 580px){
+            .empresaContenedor{
+            grid-template-columns: 100%;
+            margin: 20px;
+            grid-template-areas: 
+            "quienesSomos"
+            "objetivos"
+            "informacion";
+            }
+            .quienesSomos,.informacion,.objetivos{
+            background:$bg_gris;
+            }
+            h4{
+            font-size: 10px;
+            }
+            p{
+            font-size: 8px;
+            }
+            }
+        }
+        @mixin condicion ($bc) {
+            background-color:($bc);  
+        
+        @if $bc == $bg_gris{
+            color: #110808;
+        } 
+        @else if $bc == $bg_grisclarito{
+            color: #111010b6;
+        }
+        @else if $bc == $bg_grisclaro{
+            color: rgb(20, 15, 15);
+        }
+    }
+    @each $bg in white, white, white{
+        .#{$bg}{
+            background-color: $bg;
+        } 
+
+            .bitcoin{
+                display: inline-block;
+                margin: 20px;
+
+                .bitcoinParrafo1{
+                @extend.bitcoin;
+                    border: 2px $bg_gris solid;
+                    @include condicion($bg_gris);
+                   /* background-color: $bg_blanco;*/
+                    padding: $padding/2;
+                }
+                .bitcoinParrafo2{
+                @extend.bitcoin;
+                    border: 2px $bg_gris solid;
+                    @include condicion($bg_grisclarito);
+                    padding: $padding/2;
+                }
+                .bitcoinParrafo3{
+                @extend.bitcoin;
+                    border: 2px $bg_gris solid;
+                    @include condicion($bg_grisclaro);
+                    padding: $padding/2;
+                }
+                .video {
+                    width: 30%;
+                    text-align: left;
+                    margin: 20px;
+                    }
+                }
+                section{
+                    .criptoblog{
+                    text-align: center;
+                    padding: 50px;
+                    } 
+        
+            .imagenAyuda {
+            display: inline-flex;
+            }
+            .imagenQr {
+            display:inline-flex;
+            margin: 40px;
+            }
+            .imagenQr:hover{
+            transform: scale(1.5,1.5);
+            }  
+            h2{
+            font-family: 'Barlow Condensed', sans-serif;
+            text-align: left;
+            letter-spacing: inherit;
+            animation-duration: 2s;
+            animation-name:transparencia;
+            }
+            @keyframes transparencia{
+            0%{
+                opacity: 0;color: $bg_grisclarito ;
+            }
+            25%{
+                opacity: 0.2;color:$bg_grisclaro;
+            }
+            50%{
+                opacity: 0.5;color:$bg_grisintermedio;
+            }
+            75%{
+                opacity: 0.7;color: $bg_grisoscuro;
+            }
+            100%{
+                opacity: 1; color: $bg_negro;
+            }  
+            }  
+            h4{
+                text-align: left;
+                text-transform: uppercase;
+            } 
+            p{
+                font-size: 20px;
+                line-height: 1.6;
+            }
+            
+            .formulario{
+                background:$bg_blanco;
+                background-size: 1500px 600px;
+                width: 100%;
+            }
+            
+            @for $i from 1 through 10 {
+                .somos-#{$i}{margin: 5px * $i}
+                
+            }
+        
+        }
+            }
+            .formularioFielset{
+                padding: 20px;
+                margin: 50px;
+                background: $bg_blanco;
+            }
+        }
+    }
+    
+    
+    
+
+
+
