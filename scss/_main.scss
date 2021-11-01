@@ -134,66 +134,66 @@ body, main{
                     text-align: center;
                     padding: 50px;
                     } 
-            .imagenQr {
-            display:inline-flex;
-            margin: 40px;
-            }
-            .imagenQr:hover{
-            transform: scale(1.5,1.5);
-            }  
-            h2{
-            font-family: 'Barlow Condensed', sans-serif;
-            text-align: left;
-            letter-spacing: inherit;
-            animation-duration: 2s;
-            animation-name:transparencia;
-            }
-            @keyframes transparencia{
-            0%{
-                opacity: 0;color: $bg_grisclarito ;
-            }
-            25%{
-                opacity: 0.2;color:$bg_grisclaro;
-            }
-            50%{
-                opacity: 0.5;color:$bg_grisintermedio;
-            }
-            75%{
-                opacity: 0.7;color: $bg_grisoscuro;
-            }
-            100%{
-                opacity: 1; color: $bg_negro;
-            }  
-            }  
-            h4{
-                text-align: left;
-                text-transform: uppercase;
-            } 
-            p{
-                font-size: 20px;
-                line-height: 1.6;
-            }
+                    .imagenQr {
+                    display:inline-flex;
+                    margin: 40px;
+                    }
+                    .imagenQr:hover{
+                    transform: scale(1.5,1.5);
+                    }  
+                    h2{
+                    font-family: 'Barlow Condensed', sans-serif;
+                    text-align: left;
+                    letter-spacing: inherit;
+                    animation-duration: 2s;
+                    animation-name:transparencia;
+                    }
+                    @keyframes transparencia{
+                    0%{
+                       opacity: 0;color: $bg_grisclarito ;
+                    }
+                    25%{
+                    opacity: 0.2;color:$bg_grisclaro;
+                    }
+                    50%{
+                    opacity: 0.5;color:$bg_grisintermedio;
+                    }
+                    75%{
+                    opacity: 0.7;color: $bg_grisoscuro;
+                    }
+                    100%{
+                    opacity: 1; color: $bg_negro;
+                    }  
+                    }  
+                    h4{
+                       text-align: left;
+                       text-transform: uppercase;
+                    } 
+                    p{
+                      font-size: 20px;
+                      line-height: 1.6;
+                    }
             
-            .formulario{
-                background:$bg_blanco;
-                background-size: 1500px 600px;
-                width: 100%;
-            }
+                    .formulario{
+                     background:$bg_blanco;
+                     background-size: 1500px 600px;
+                     width: 100%;
+                     }
             
-            @for $i from 1 through 10 {
-                .somos-#{$i}{margin: 5px * $i}
+                     @for $i from 1 through 10 {
+                     .somos-#{$i}{margin: 5px * $i}
                 
-            }
+                     }
         
-        }
-            }
-            .formularioFielset{
-                padding: 20px;
-                margin: 50px;
-                background: $bg_blanco;
-            }
-        }
-    }
+                   }
+                  }
+                     .formularioFielset{
+                     padding: 20px;
+                     margin: 50px;
+                     background: $bg_blanco;
+                   }
+                 }
+               }
     
     
     
